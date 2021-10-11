@@ -1,4 +1,4 @@
-const mongoose = reuiqre('mongoose')
+const mongoose = require('mongoose')
 
 const userSchema = mongoose.Schema({
     name:{
@@ -31,6 +31,6 @@ const userSchema = mongoose.Schema({
     }
 })
 
-const User = mongoose.model('User','userSchema') // 모델이 스키마를 감쌈
+const User = mongoose.model('User',userSchema) // 모델이 스키마를 감쌈
 
 module.exports = {User} // 다른데서 쓸 수 있게 export함
